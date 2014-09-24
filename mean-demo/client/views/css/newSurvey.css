@@ -1,0 +1,73 @@
+/***** General Form Styles *****/
+
+.newSurvey_form {
+  font-family: "Droid Serif", serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+
+.newSurvey_form-label {
+  display: block;
+}
+
+.newSurvey_form-label,
+.newSurvey_form-textarea {
+  margin: 1rem 0 1rem 0;
+}
+
+.newSurvey_form-textarea{
+  height: 5rem;
+  width: 60%;
+  border-radius: 1rem;
+}
+
+
+/***** Name & Course Fieldset *****/
+
+.form-h1 {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.newSurvey_form-info {
+  padding: 2rem 0;
+  text-align: center;
+  background-color: #e0ddd1;
+  border-radius: 2rem;
+}
+
+.newSurvey_form-text {
+  margin: 0 1rem;
+}
+
+
+/***** Main Questions Fieldset *****/
+
+.newSurvey_form-questions {
+  margin-top: 2rem;
+  padding: 0 2rem;
+  background-color: #e0ddd1;
+  border-radius: 2rem;
+}
+
+
+/***** Radio Button Questions *****/
+
+.newSurvey_form-rd {
+  text-align: center;
+}
+
+.newSurvey_form-rdbtn {
+  margin-left: 4%;
+}
+
+.subj {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+}

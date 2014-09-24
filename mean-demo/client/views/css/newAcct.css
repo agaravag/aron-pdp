@@ -1,0 +1,8 @@
+.newAcct_logo {
+  width:10em;
+}
+
+.newAcct_form-label,
+.newAcct_form-text {
+  display: block;
+}
