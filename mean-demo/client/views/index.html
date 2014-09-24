@@ -1,33 +1,88 @@
 <!DOCTYPE html>
 <html ng-app="meetupApp">
-<head>
-  <title></title>
-</head>
-<body>
+  <head>
+    <meta charset="utf-8">
+    <title>Personalized Growth Plan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Rajdhani:400,700|Source+Code+Pro:400,700|Droid+Serif:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/base.css"></link>
+    <link rel="stylesheet" type="text/css" href="css/header.css"></link>
+    <link rel="stylesheet" type="text/css" href="css/nav.css"></link>
+    <link rel="stylesheet" type="text/css" href="css/newPGP.css"></link>
+    <link rel="stylesheet" type="text/css" href="css/footer.css"></link>
+    <link rel="stylesheet" type="text/css" href="css/new_pgp_layout.css"></link>
+  </head>
 
-  <!-- Meetups View -->  
-  <div ng-controller="meetupsController">
-    <h1>There are {{meetups.length}} Students</h1>
-    <ul>
-      <li ng-repeat="meetup in meetups">
-        <p>name: {{meetup.name}} |||| location: {{meetup.location}} ||||
-        time: {{meetup.time}} |||| food: {{meetup.food}}
-        </p> 
-      </li>
-    </ul>
-    <form ng-submit="createMeetup()">
-      <input type="text" placeholder="Student name" ng-model="meetupName"></input>
-      <input type="text" placeholder="Student location" ng-model="meetupLocation"></input>
-      <input type="text" placeholder="Student time" ng-model="meetupTime"></input>
-      <input type="text" placeholder="Student food" ng-model="meetupFood"></input>
-      <button type="submit">Save information</button>
-    </form>
-  </div>
+  <body>
+    <header>
+      <img class="header-logo" src="img/logo_wText2.png" alt="logo"></img>
+      <h1 class="header-h1">Create Personalized Growth Plan</h1>
+      <nav class="nav">
+        <ul class="nav_ul">
+          <li class="nav_ul-li">
+            <a class="nav_ul-li-a" href="#">Home</a>
+          </li>
+          <li class="nav_ul-li">
+            <a class="nav_ul-li-a" href="#">Classes</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-resource.js"></script>
+    <article class="newPGP">
+      <form class="newPGP_form" form ng-submit="createMeetup()">
+        <fieldset class="newPGP_form-stdntinfo">
+          <label class="newPGP_form-stdnt h1">Personalized Plan for:</label>
+          <input type="text" placeholder="Student Name" ng-model="meetupName"></input>
+          <label class="newPGP_form-course h1">Course:</label>
+          <input type="text" placeholder="Course Name" ng-model="meetupLocation"></input>
+        </fieldset>
 
-  <script type="text/javascript" src="/js/app.js"></script>
-  <script type="text/javascript" src="/js/controllers/meetups-controller.js"></script>
-</body>
+        <fieldset class="newPGP_form-sbj-wrap">
+          <div class="newPGP_form-sbj">
+            <label class="newPGP_form-sbj-lbl">HTML</label>
+            <label class="newPGP_form-sbj-reclbl">Your recommendation:</label>
+            <textarea class="newPGP_form-sbj-cmt" type="text" placeholder="" ng-model="meetupLocation"></textarea>
+          </div>
+
+          <div class="newPGP_form-sbj">
+            <label class="newPGP_form-sbj-lbl">CSS</label>
+            <label class="newPGP_form-sbj-reclbl">Your recommendation:</label>
+            <textarea class="newPGP_form-sbj-cmt" type="text" placeholder="" ng-model="meetupLocation"></textarea>
+          </div>
+
+          <div class="newPGP_form-sbj">
+            <label class="newPGP_form-sbj-lbl">Javascript</label>
+            <label class="newPGP_form-sbj-reclbl">Your recommendation:</label>
+            <textarea class="newPGP_form-sbj-cmt" type="text" placeholder="" ng-model="meetupLocation"></textarea>
+          </div>
+
+          <div class="newPGP_form-sbj">
+            <label class="newPGP_form-sbj-lbl">Notes:</label>
+            <textarea class="newPGP_form-sbj-cmt" type="text" placeholder="" ng-model="meetupLocation"></textarea>
+          </div>
+        </fieldset>
+
+        <button type="submit" class="newPGP_form-btn">SUBMIT</button>
+
+      </form>
+    </article>
+
+       <!-- Meetups View -->  
+      <div ng-controller="meetupsController">
+        <ul>
+          <li ng-repeat="meetup in meetups">
+          <p>name: {{meetup.name}} |||| location: {{meetup.location}} ||||
+          time: {{meetup.time}} |||| food: {{meetup.food}}
+          </p> 
+          </li>
+        </ul>
+
+    <!-- Javascripts -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-resource.js"></script>
+
+    <script type="text/javascript" src="/js/app.js"></script>
+    <script type="text/javascript" src="/js/controllers/meetups-controller.js"></script>
+  </body>
 </html>
