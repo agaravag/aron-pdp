@@ -1,0 +1,9 @@
+{
+  "name": "mean-demo",
+  "version": "0.0.1",
+  "devDependencies": {
+    "body-parser": "^1.8.4",
+    "express": "^4.9.4",
+    "mongoose": "^3.8.16"
+  }
+}
